@@ -16,9 +16,9 @@ namespace BuildCaravela
        
             var product = new Product
             {
-                ProductName = "My.Product",
-                Solutions = ImmutableArray.Create<Solution>( new DotNetSolution( "src\\My.Product.sln" ) ),
-                PublicArtifacts = Pattern.Create( "My.Product.$(PackageVersion).nupkg" ),
+                ProductName = "Metalama.Demo",
+                Solutions = ImmutableArray.Create<Solution>( new DotNetSolution( "src\\Metalama.Demo.sln" ) ),
+                PublicArtifacts = Pattern.Create( "Metalama.Demo.$(PackageVersion).nupkg" ),
                 Dependencies = ImmutableArray.Create( Dependencies.PostSharpEngineering, Dependencies.Metalama )
             };
 

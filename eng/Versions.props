@@ -4,8 +4,8 @@
     <Import Project="MainVersion.props" />
     
     <PropertyGroup>
-        <MyProductVersion>$(MainVersion)$(PackageVersionSuffix)</MyProductVersion>
-        <MyProductAssemblyVersion>$(MainVersion)</MyProductAssemblyVersion>
+        <MetalamaDemoVersion>$(MainVersion)$(PackageVersionSuffix)</MetalamaDemoVersion>
+        <MetalamaDemoAssemblyVersion>$(MainVersion)</MetalamaDemoAssemblyVersion>
     </PropertyGroup>
 
     
@@ -27,8 +27,8 @@
     <Import Project="Versions.g.props" Condition="Exists('Versions.g.props')" />
 
     <PropertyGroup>
-        <AssemblyVersion>$(MyProductAssemblyVersion)</AssemblyVersion>
-        <Version>$(MyProductVersion)</Version>
+        <AssemblyVersion>$(MetalamaDemoAssemblyVersion)</AssemblyVersion>
+        <Version>$(MetalamaDemoVersion)</Version>
     </PropertyGroup>
 
 </Project>
