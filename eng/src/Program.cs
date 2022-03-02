@@ -3,29 +3,29 @@
 
 using PostSharp.Engineering.BuildTools;
 using PostSharp.Engineering.BuildTools.Build.Model;
+using PostSharp.Engineering.BuildTools.Build.Solutions;
 using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using Spectre.Console.Cli;
-using System.Collections.Immutable;
 
 namespace BuildCaravela
 {
     internal static class Program
     {
-        private static int Main( string[] args )
+        private static int Main(string[] args)
         {
-       
+
             var product = new Product
             {
                 ProductName = "Metalama.Demo",
-                Solutions = ImmutableArray.Create<Solution>( new DotNetSolution( "src\\Metalama.Demo.sln" ) ),
-                PublicArtifacts = Pattern.Create( "Metalama.Demo.$(PackageVersion).nupkg" ),
-                Dependencies = ImmutableArray.Create( Dependencies.PostSharpEngineering, Dependencies.Metalama )
+                Solutions = new[] { new DotNetSolution("Metalama.Demo.sln") },
+                PublicArtifacts = Pattern.Create("Metalama.Demo.$(PackageVersion).nupkg"),
+                Dependencies = new[] { Dependencies.PostSharpEngineering, Dependencies.Metalama }
             };
 
             var commandApp = new CommandApp();
-            commandApp.AddProductCommands( product );
+            commandApp.AddProductCommands(product);
 
-            return commandApp.Run( args );
+            return commandApp.Run(args);
         }
     }
 }
