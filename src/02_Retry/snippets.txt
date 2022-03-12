@@ -1,5 +1,0 @@
-﻿[Retry]
-static async void MyAsyncMethod()
-{
-    Console.WriteLine("Hello, world.");
-}
