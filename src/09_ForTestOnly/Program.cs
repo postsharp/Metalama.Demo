@@ -1,16 +1,31 @@
-﻿class Program
+﻿namespace Foo
 {
-    [ForTestOnly]
-    static void MyMethod()
+    class Program
     {
-        // Some very typical business code.
-        Console.WriteLine("Hello, World!");
+        [ForTestOnly]
+        public static void SomeTestMethod()
+        {
+            // Some very typical business code.
+            Console.WriteLine( "Hello, World!" );
+        }
+
+        static void Main()
+        {
+            // This call to SomeTestMethod is FORBIDDEN because we are not in a test namespace.
+            SomeTestMethod();
+        }
     }
 
-    static void Main()
+    namespace Tests
     {
-        MyMethod();
+        class Bar
+        {
+            void M()
+            {
+                // This call to SomeTestMethod is ALLOWED because we are not in a test namespace.
+                Program.SomeTestMethod();
+            }
+        }
     }
+
 }
-
-
