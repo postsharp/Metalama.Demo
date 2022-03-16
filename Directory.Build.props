@@ -9,7 +9,9 @@
         <MetalamaDebugAnalyzer>True</MetalamaDebugAnalyzer>
         <MetalamaDebugIde>False</MetalamaDebugIde>
         <CaravelaDebugTransformedCode>True</CaravelaDebugTransformedCode>
-        
+		 
+		 <!-- Disable analysis while we have the SDK version mismatch -->
+	    <EnableNETAnalyzers>False</EnableNETAnalyzers>
      
     </PropertyGroup>
 

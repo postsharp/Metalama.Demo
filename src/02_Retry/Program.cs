@@ -2,7 +2,7 @@
 {
     static int _invocations;
 
-    [Retry]
+    [Retry( Attempts = 5 )]
     static void MyMethod()
     {
         _invocations++;

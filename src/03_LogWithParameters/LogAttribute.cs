@@ -8,7 +8,7 @@ class LogAttribute : OverrideMethodAspect
     {
         // Build an interpolated string that contains all parameters.
         var stringBuilder = new InterpolatedStringBuilder();
-        stringBuilder.AddExpression( meta.Target.Method.Name );
+        stringBuilder.AddText( meta.Target.Method.Name );
         stringBuilder.AddText( "( " );
 
         foreach ( var parameter in meta.Target.Parameters )

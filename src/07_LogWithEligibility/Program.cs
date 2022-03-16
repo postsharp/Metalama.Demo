@@ -11,7 +11,7 @@
 
     static void Main()
     {
-        new Program().MyMethod();
+    
     }
 }
 
