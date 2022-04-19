@@ -34,7 +34,7 @@ public class ToStringAttribute : TypeAspect
     /// <summary>
     /// Implementation of the "Switch [ToString] to manual implementation" code action.
     /// </summary>
-    [CompileTimeOnly]
+    [CompileTime]
     private async Task ImplementManually( ICodeActionBuilder builder, INamedType targetType )
     {
         await builder.ApplyAspectAsync( targetType, this );

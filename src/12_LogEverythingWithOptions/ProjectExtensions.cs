@@ -1,7 +1,7 @@
 ﻿using Metalama.Framework.Aspects;
 using Metalama.Framework.Project;
 
-[CompileTimeOnly]
+[CompileTime]
 public static class ProjectExtensions
 {
     /// <summary>
