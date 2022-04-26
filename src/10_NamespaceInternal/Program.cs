@@ -28,7 +28,7 @@ namespace Foo
 
             public override void AmendNamespace( INamespaceAmender amender )
             {
-                amender.WithTargetMembers( c => c.AllTypes.Where( t => t.Accessibility == Accessibility.Internal ) ).ValidateReferences( this.ValidateReference, ReferenceKinds.All );
+                amender.With( c => c.AllTypes.Where( t => t.Accessibility == Accessibility.Internal ) ).ValidateReferences( this.ValidateReference, ReferenceKinds.All );
             }
 
             private void ValidateReference( in ReferenceValidationContext context )
