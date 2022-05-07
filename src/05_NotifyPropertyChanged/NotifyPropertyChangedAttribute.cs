@@ -9,11 +9,11 @@ internal class NotifyPropertyChangedAttribute : TypeAspect
 {
     public override void BuildAspect( IAspectBuilder<INamedType> builder )
     {
-        builder.Advices.ImplementInterface( builder.Target, typeof(INotifyPropertyChanged) );
+        builder.Advice.ImplementInterface( builder.Target, typeof(INotifyPropertyChanged) );
 
         foreach ( var property in builder.Target.Properties.Where( p => !p.IsAbstract && p.Writeability == Writeability.All ) )
         {
-            builder.Advices.OverrideFieldOrPropertyAccessors( property, null, nameof(this.OverridePropertySetter) );
+            builder.Advice.OverrideAccessors( property, null, nameof(this.OverridePropertySetter) );
         }
     }
 
