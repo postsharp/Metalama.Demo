@@ -14,9 +14,8 @@ namespace BuildCaravela
         private static int Main(string[] args)
         {
 
-            var product = new Product
+            var product = new Product( new DependencyDefinition("Metalama.Demo", VcsProvider.GitHub, "Metalama.Demo", false ))
             {
-                ProductName = "Metalama.Demo",
                 Solutions = new[] { new DotNetSolution("Metalama.Demo.sln") },
                 PublicArtifacts = Pattern.Create("Metalama.Demo.$(PackageVersion).nupkg"),
                 Dependencies = new[] { Dependencies.PostSharpEngineering, Dependencies.Metalama }
