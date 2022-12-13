@@ -12,6 +12,8 @@
 		 
 		 <!-- Disable analysis while we have the SDK version mismatch -->
 	    <EnableNETAnalyzers>False</EnableNETAnalyzers>
+
+        <LangVersion>10.0</LangVersion>
      
     </PropertyGroup>
 

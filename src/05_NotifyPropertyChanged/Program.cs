@@ -22,3 +22,13 @@ partial class Vector
     public double Y { get; set; }
 }
 
+class ColoredVector : Vector
+{
+    public string Color { get; set; }
+
+    public ColoredVector(double x, double y, string color) : base(x, y)
+    {
+        this.Color = color;
+    }
+}
+

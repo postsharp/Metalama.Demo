@@ -49,8 +49,7 @@ public class ToStringAttribute : TypeAspect
     public string IntroducedToString()
     {
         // Get the fields and properties that must be included in ToString.
-        var fields = meta.Target.Type.FieldsAndProperties.Where( f => !f.IsStatic &&
-        !f.Attributes.Any( a => a.Type.Is( typeof( NotToStringAttribute ) ) ) ).ToList();
+        var fields = meta.Target.Type.FieldsAndProperties.Where( f => !f.IsStatic && !f.IsImplicitlyDeclared && !f.Attributes.Any( a => a.Type.Is( typeof( NotToStringAttribute ) ) ) ).ToList();
 
         // Build an interpolated string.
         var stringBuilder = new InterpolatedStringBuilder();

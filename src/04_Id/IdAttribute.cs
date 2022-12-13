@@ -3,5 +3,5 @@
 class IdAttribute : TypeAspect
 {
     [Introduce]
-    public Guid Id { get; } = Guid.NewGuid();
+    public Guid Id4 { get; } = Guid.NewGuid();
 }

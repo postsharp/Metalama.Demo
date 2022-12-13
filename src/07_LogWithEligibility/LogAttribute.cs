@@ -10,7 +10,7 @@ class LogAttribute : OverrideMethodAspect
         "DEMO01", 
         Severity.Error, 
         "The type '{0}' must contain an instance field '_logger' of type 'TextWriter' because of the [Log] aspect on '{1}'." );
-
+    
  
     // Entry point of the aspect.
     public override void BuildAspect( IAspectBuilder<IMethod> builder )
@@ -34,7 +34,7 @@ class LogAttribute : OverrideMethodAspect
     public override void BuildEligibility( IEligibilityBuilder<IMethod> builder )
     {
         base.BuildEligibility( builder );
-        builder.MustBeNonStatic();
+        builder.MustNotBeStatic();
     }
 
     // Template that overrides the methods to which the aspect is applied.

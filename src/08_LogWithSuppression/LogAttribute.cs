@@ -41,7 +41,7 @@ class LogAttribute : OverrideMethodAspect
     public override void BuildEligibility( IEligibilityBuilder<IMethod> builder )
     {
         base.BuildEligibility( builder );
-        builder.MustBeNonStatic();
+        builder.MustNotBeStatic();
     }
 
     // Template that overrides the methods to which the aspect is applied.

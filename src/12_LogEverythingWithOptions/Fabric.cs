@@ -10,7 +10,7 @@ namespace Demo1
             amender.Project.LogOptions().Color = ConsoleColor.Green;
 
             // Add logging to all types and all methods.
-            amender.With( c => c.Types.SelectMany( t => t.Methods ) ).AddAspect( t => new LogAttribute() );
+            amender.With( c => c.Types.SelectMany( t => t.Methods ) ).AddAspectIfEligible( t => new LogAttribute() );
         }
     }
 }
