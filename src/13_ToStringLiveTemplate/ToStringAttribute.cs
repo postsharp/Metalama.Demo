@@ -5,7 +5,7 @@ using Metalama.Framework.Code;
 using Metalama.Framework.Code.SyntaxBuilders;
 using System.Linq;
 
-[LiveTemplate]
+[EditorExperience( SuggestAsLiveTemplate = true )]
 internal class ToStringAttribute : TypeAspect
 {
     [Introduce( WhenExists = OverrideStrategy.Override, Name = "ToString" )]

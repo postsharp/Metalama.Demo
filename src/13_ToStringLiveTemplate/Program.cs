@@ -16,12 +16,7 @@ namespace Metalama.Samples.ToString
 
         public double Velocity => Math.Sqrt( (this.DX * this.DX) + (this.DY * this.DY) );
 
-
-        public override string ToString()
-        {
-            return $"{{ MovingVertex X={this.X}, Y={this.Y}, DX={this.DX}, DY={this.DY}, Velocity={this.Velocity} }}";
-
-        }    }
+ }
 
     internal class Program
     {

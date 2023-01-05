@@ -9,7 +9,7 @@ internal class NotifyPropertyChangedAttribute : TypeAspect
 {
     public override void BuildAspect( IAspectBuilder<INamedType> builder )
     {
-        builder.Advice.ImplementInterface( builder.Target, typeof(INotifyPropertyChanged) );
+        builder.Advice.ImplementInterface( builder.Target, typeof(INotifyPropertyChanged), whenExists: OverrideStrategy.Ignore );
 
         foreach ( var property in builder.Target.Properties.Where( p => !p.IsAbstract && p.Writeability == Writeability.All ) )
         {
