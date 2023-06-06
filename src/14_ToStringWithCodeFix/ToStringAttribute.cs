@@ -68,7 +68,7 @@ public class ToStringAttribute : TypeAspect
 
             stringBuilder.AddText( field.Name );
             stringBuilder.AddText( "=" );
-            stringBuilder.AddExpression( field.Invokers.Final.GetValue( meta.This ) );
+            stringBuilder.AddExpression( field);
 
             i++;
         }

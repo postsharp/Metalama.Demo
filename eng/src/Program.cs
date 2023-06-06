@@ -18,7 +18,7 @@ namespace BuildCaravela
             var product = new Product(new DependencyDefinition("Metalama.Demo", VcsProvider.GitHub, "Metalama.Demo", false))
             {
                 Solutions = new[] { new DotNetSolution("Metalama.Demo.sln") },
-                Dependencies = new[] { Dependencies.PostSharpEngineering, Dependencies.Metalama },
+                Dependencies = new[] { Dependencies.PostSharpEngineering, Dependencies.MetalamaExtensions },
                 Configurations = Product.DefaultConfigurations
                     .WithValue(BuildConfiguration.Public, Product.DefaultConfigurations.Public with { PublicPublishers = new Publisher[] { new MergePublisher() } })
             };

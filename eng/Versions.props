@@ -11,9 +11,9 @@
     
     <!-- Set the default versions of dependencies -->
     <PropertyGroup>
-        <PostSharpEngineeringVersion>1.0.98-preview</PostSharpEngineeringVersion>
-		<MetalamaVersion>0.5.83-preview</MetalamaVersion>
-        <MetalamaVersion Condition="$(VcsBranch.StartsWith('dev'))">branch:master</MetalamaVersion>
+        <PostSharpEngineeringVersion>2023.1.14-preview</PostSharpEngineeringVersion>
+		<MetalamaVersion></MetalamaVersion>
+        <MetalamaExtensionsVersion></MetalamaExtensionsVersion>
 
         <!-- Example of dependencies to third parties -->
         <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
