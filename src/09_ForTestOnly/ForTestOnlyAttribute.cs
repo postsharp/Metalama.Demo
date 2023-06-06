@@ -13,7 +13,7 @@ class ForTestOnlyAttribute : Aspect, IAspect<IDeclaration>
 
     public void BuildAspect( IAspectBuilder<IDeclaration> builder )
     {
-        builder.With( d => d ).ValidateReferences( this.ValidateReference, ReferenceKinds.All );
+        builder.Outbound.Select( d => d ).ValidateReferences( this.ValidateReference, ReferenceKinds.All );
     }
 
     private void ValidateReference( in ReferenceValidationContext context )
