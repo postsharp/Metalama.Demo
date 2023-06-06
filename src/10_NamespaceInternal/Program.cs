@@ -3,6 +3,8 @@ using Metalama.Framework.Code;
 using Metalama.Framework.Diagnostics;
 using Metalama.Framework.Fabrics;
 using Metalama.Framework.Validation;
+using Metalama.Extensions.Architecture.Fabrics;
+using Metalama.Extensions.Architecture.Predicates;
 
 namespace Foo
 {
@@ -21,26 +23,12 @@ namespace Foo
 
         class Fabric : NamespaceFabric
         {
-            private static readonly DiagnosticDefinition<(IDeclaration, INamespace)> _warning = new(
-         "DEMO03",
-         Severity.Warning,
-         "'{0}' can be used only in the namespace '{1}'." );
 
             public override void AmendNamespace( INamespaceAmender amender )
             {
-                amender.With( c => c.DescendantsAndSelf().SelectMany( ns => ns.Types ) .Where( t => t.Accessibility == Accessibility.Internal ) ).ValidateReferences( this.ValidateReference, ReferenceKinds.All );
+                amender.Verify().InternalsCannotBeUsedFrom( x => x.CurrentNamespace() );
             }
 
-            private void ValidateReference( in ReferenceValidationContext context )
-            {
-                var referencedNamespace = ((INamedType) context.ReferencedDeclaration).Namespace;
-                var referencingNamespace = context.ReferencingType.Namespace;
-
-                if ( referencedNamespace != referencingNamespace && !referencingNamespace.IsDescendantOf( referencedNamespace ) )
-                {
-                    context.Diagnostics.Report( _warning.WithArguments( (context.ReferencedDeclaration, referencedNamespace) ) );
-                }
-            }
         }
 
         internal class InternalClass
