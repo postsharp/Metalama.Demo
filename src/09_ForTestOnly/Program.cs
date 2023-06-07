@@ -1,4 +1,5 @@
-﻿using Metalama.Extensions.Architecture.Aspects;
+﻿using Demo1;
+using Metalama.Extensions.Architecture.Aspects;
 
 namespace Foo
 {
@@ -8,22 +9,28 @@ namespace Foo
    
         static void Main()
         {
-            // This call to SomeTestMethod is FORBIDDEN because we are not in a test namespace.
+            // These calls to SomeTestMethod is FORBIDDEN because we are not in a test namespace.
             new Foo( true );
+            new Foo( "Jane", true );
         }
     }
 
     class Foo
     {
+        public string Name { get; }
         public bool IsTest { get; }
 
         [CanOnlyBeUsedFrom( Namespaces = new[] { "**.Tests.**" } )]
-        public Foo( bool isTest )
+        public Foo( string name, bool isTest )
         {
             this.IsTest = isTest;
+            this.Name = name;
         }
 
-        public Foo() { }
+        [ForTestOnly]
+        public Foo( bool isTest ) : this( "default", isTest ) { }
+
+        public Foo( string name = "default" ) : this( false ) { }
 
     }
 
