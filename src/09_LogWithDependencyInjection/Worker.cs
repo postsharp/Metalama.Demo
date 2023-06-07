@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 
-class Worker : BackgroundService
+partial class Worker : BackgroundService
 {
     [Log]
     protected override Task ExecuteAsync( CancellationToken stoppingToken )
