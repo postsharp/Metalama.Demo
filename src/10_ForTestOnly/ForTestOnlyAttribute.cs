@@ -8,7 +8,7 @@ namespace Demo1
     {
         public ForTestOnlyAttribute() 
         {
-            this.Namespaces = new[] { "**.Tests.**" };
+            this.Namespaces = ["**.Tests.**"];
         }
     }
 }

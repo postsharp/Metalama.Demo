@@ -18,7 +18,7 @@ var teamCityConfiguration = TeamCityHelper.CreateConfiguration( TeamCityHelper.G
 var product = new Product(new DependencyDefinition( MetalamaDependencies.Family, "Metalama.Demo", "dev", "master", new GitHubRepository("Metalama.Demo" ), teamCityConfiguration, false))
 {
     Solutions = new[] { new DotNetSolution("Metalama.Demo.sln") },
-    Dependencies = new[] { DevelopmentDependencies.PostSharpEngineering.ToDependency(), MetalamaDependencies.MetalamaExtensions },
+    Dependencies = new[] { DevelopmentDependencies.PostSharpEngineering.ToDependency(), MetalamaDependencies.MetalamaPatterns },
     Configurations = Product.DefaultConfigurations
         .WithValue(BuildConfiguration.Public, Product.DefaultConfigurations.Public with { PublicPublishers = new Publisher[] { new MergePublisher() } })
 };

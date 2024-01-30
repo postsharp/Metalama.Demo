@@ -18,9 +18,6 @@ public static class Program
            {
                loggingBuilder.SetMinimumLevel( LogLevel.Debug );
            } );
-
-
-
 }
 
 

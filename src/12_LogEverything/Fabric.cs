@@ -7,7 +7,10 @@ namespace Demo1
         public override void AmendProject( IProjectAmender amender )
         {
             // Add logging to all types and all methods.
-            amender.Outbound.SelectMany( c => c.Types.SelectMany( t => t.Methods ) ).AddAspectIfEligible( t => new LogAttribute() );
+            amender.Outbound
+                .SelectMany( c => c.Types )
+                .SelectMany( t => t.Methods )
+                .AddAspectIfEligible<LogAttribute>();
         }
     }
 }

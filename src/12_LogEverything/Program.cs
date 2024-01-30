@@ -1,4 +1,4 @@
-﻿class Program
+﻿static class Program
 {
     static void Main()
     {
@@ -6,7 +6,7 @@
     }
 }
 
-class Greeter
+static class Greeter
 {
     public static void Greet()
     {

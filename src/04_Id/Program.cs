@@ -3,7 +3,7 @@
     static void Main()
     {
         var foo = new Foo();
-        Console.WriteLine(foo.Id4);
+        Console.WriteLine(foo.Id);
     }
     
 }

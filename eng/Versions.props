@@ -15,6 +15,7 @@
         <PostSharpEngineeringVersion>2023.2.77</PostSharpEngineeringVersion>
 		<MetalamaVersion></MetalamaVersion>
         <MetalamaExtensionsVersion></MetalamaExtensionsVersion>
+        <MetalamaPatternsVersion></MetalamaPatternsVersion>
 
         <!-- Example of dependencies to third parties -->
         <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
