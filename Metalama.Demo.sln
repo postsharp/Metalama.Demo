@@ -47,6 +47,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Patterns", "04_Patterns"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching", "src\Caching\Caching.csproj", "{95F42C89-5B9F-45CB-ADA4-883E8CB33203}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "src\Contracts\Contracts.csproj", "{E8A90363-D95C-4175-AD42-0A8A73BADD54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -150,6 +152,12 @@ Global
 		{95F42C89-5B9F-45CB-ADA4-883E8CB33203}.LamaDebug|Any CPU.Build.0 = Debug|Any CPU
 		{95F42C89-5B9F-45CB-ADA4-883E8CB33203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95F42C89-5B9F-45CB-ADA4-883E8CB33203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A90363-D95C-4175-AD42-0A8A73BADD54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A90363-D95C-4175-AD42-0A8A73BADD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A90363-D95C-4175-AD42-0A8A73BADD54}.LamaDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A90363-D95C-4175-AD42-0A8A73BADD54}.LamaDebug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A90363-D95C-4175-AD42-0A8A73BADD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A90363-D95C-4175-AD42-0A8A73BADD54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,6 +180,7 @@ Global
 		{4C5332A2-A1B1-408A-B8C2-AA8419500D01} = {35C14AC9-529D-41DC-B716-E2105A3E4B71}
 		{0E8B7B65-01DE-42E5-A44E-653F8E43AE41} = {FFD9DCF5-3A6B-40FA-B160-57FB5211067A}
 		{95F42C89-5B9F-45CB-ADA4-883E8CB33203} = {1B5048B6-2BEB-47D7-B1AF-2820FD22AC72}
+		{E8A90363-D95C-4175-AD42-0A8A73BADD54} = {1B5048B6-2BEB-47D7-B1AF-2820FD22AC72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40D2FBCB-DC9E-4CF3-AA05-9A42E9210D2C}
