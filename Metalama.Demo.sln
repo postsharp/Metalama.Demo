@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_LogWithSuppression", "sr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1A_Aspects", "1A_Aspects", "{35C14AC9-529D-41DC-B716-E2105A3E4B71}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_ArchitectureValidation", "03_ArchitectureValidation", "{260C060F-65F6-41E9-A2DA-E8BEAB4B4862}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_ArchitectureValidation", "2_ArchitectureValidation", "{260C060F-65F6-41E9-A2DA-E8BEAB4B4862}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1B_Fabrics", "1B_Fabrics", "{A042D991-422D-4E5F-A6F6-FF861966C55D}"
 EndProject
@@ -43,7 +43,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_ChangeTracking", "src\05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_ChangeTracking _ReportErrors", "src\06_ChangeTracking _ReportErrors\06_ChangeTracking _ReportErrors.csproj", "{4C5332A2-A1B1-408A-B8C2-AA8419500D01}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Patterns", "04_Patterns", "{1B5048B6-2BEB-47D7-B1AF-2820FD22AC72}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_Patterns", "3_Patterns", "{1B5048B6-2BEB-47D7-B1AF-2820FD22AC72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching", "src\Caching\Caching.csproj", "{95F42C89-5B9F-45CB-ADA4-883E8CB33203}"
 EndProject
