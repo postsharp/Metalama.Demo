@@ -13,9 +13,9 @@
     <!-- Set the default versions of dependencies -->
     <PropertyGroup>
         <PostSharpEngineeringVersion>2023.2.77</PostSharpEngineeringVersion>
-		<MetalamaVersion></MetalamaVersion>
-        <MetalamaExtensionsVersion></MetalamaExtensionsVersion>
-        <MetalamaPatternsVersion></MetalamaPatternsVersion>
+		<MetalamaVersion>2024.0.6</MetalamaVersion>
+        <MetalamaExtensionsVersion>2024.0.6</MetalamaExtensionsVersion>
+        <MetalamaPatternsVersion>2024.0.6</MetalamaPatternsVersion>
 
         <!-- Example of dependencies to third parties -->
         <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
