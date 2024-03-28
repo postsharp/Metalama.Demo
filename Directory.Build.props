@@ -6,12 +6,11 @@
     </PropertyGroup>
 
      <PropertyGroup>
-        <MetalamaDebugAnalyzer>True</MetalamaDebugAnalyzer>
-        <MetalamaDebugIde>False</MetalamaDebugIde>
-        <CaravelaDebugTransformedCode>True</CaravelaDebugTransformedCode>
-		 
-		 <!-- Disable analysis while we have the SDK version mismatch -->
-	    <EnableNETAnalyzers>False</EnableNETAnalyzers>
+        <IsPackable>False</IsPackable>
+        
+        <EnableNETAnalyzers>False</EnableNETAnalyzers>
+
+        <LangVersion>10.0</LangVersion>
      
     </PropertyGroup>
 
@@ -22,8 +21,6 @@
     <!-- disabled because of SDK version mismatch
     <Import Sdk="PostSharp.Engineering.Sdk" Project="CodeQuality.props"/>
     -->
-    <Import Sdk="PostSharp.Engineering.Sdk" Project="StrongName.props"/>
-    <Import Sdk="PostSharp.Engineering.Sdk" Project="SourceLink.props"/>
 
 
 </Project>

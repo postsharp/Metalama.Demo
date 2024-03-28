@@ -5,7 +5,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>Build</AssemblyName>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
-        <LangVersion>latest</LangVersion>
+        <LangVersion>10.0</LangVersion>
         <Nullable>enable</Nullable>
         <NoWarn>SA0001;CS8002</NoWarn>
     </PropertyGroup>

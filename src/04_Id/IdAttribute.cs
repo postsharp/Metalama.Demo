@@ -3,5 +3,8 @@
 class IdAttribute : TypeAspect
 {
     [Introduce]
-    public Guid Id { get; } = Guid.NewGuid();
+    private static int _nextId;
+    
+    [Introduce]
+    public int Id { get; } = Interlocked.Increment( ref _nextId );
 }

@@ -11,6 +11,7 @@
 [Id]
 partial class Foo
 {
+    int _foo;
 
 }
 

@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
 
     <!-- Set the default version of the current product -->
@@ -11,9 +12,10 @@
     
     <!-- Set the default versions of dependencies -->
     <PropertyGroup>
-        <PostSharpEngineeringVersion>1.0.98-preview</PostSharpEngineeringVersion>
-		<MetalamaVersion>0.5.50-preview</MetalamaVersion>
-        <MetalamaVersion Condition="$(VcsBranch.StartsWith('dev'))">branch:master</MetalamaVersion>
+        <PostSharpEngineeringVersion>2023.2.77</PostSharpEngineeringVersion>
+		<MetalamaVersion>2024.1.9-rc</MetalamaVersion>
+        <MetalamaExtensionsVersion>2024.1.9-rc</MetalamaExtensionsVersion>
+        <MetalamaPatternsVersion>2024.1.9-rc</MetalamaPatternsVersion>
 
         <!-- Example of dependencies to third parties -->
         <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>

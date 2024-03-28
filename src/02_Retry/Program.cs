@@ -1,15 +1,11 @@
 ﻿class Program
 {
-    static int _invocations;
-
+ 
     [Retry( Attempts = 5 )]
     static void MyMethod()
     {
-        _invocations++;
-
-        Console.WriteLine( $"{_invocations}-th attempt." );
-
-        if ( _invocations <= 2 )
+     
+        if ( Random.Shared.NextDouble() <= 0.8 )
         {
             Console.WriteLine( "Throw :-(" );
             throw new TimeoutException();
