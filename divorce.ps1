@@ -1,10 +1,10 @@
  # Run git status and capture the output
- $gitStatus = git status
+ $gitStatus = $(git status --porcelain)
 
  # Check if the output indicates uncommitted changes
- if ($gitStatus -like '*Changes not staged for commit:*' -or $gitStatus -like '*Changes to be committed:*' -or $gitStatus -like '*Untracked files*') {
+ if (-not [string]::IsNullOrWhiteSpace($gitStatus)) {
      # Throw an exception if uncommitted changes are found
-     throw 'Uncommitted changes detected. Please commit or stash your changes.'
+     throw "Uncommitted changes detected. Please commit or stash your changes. >>$gitStatus<<"
  }
 
  # Create a new branch
