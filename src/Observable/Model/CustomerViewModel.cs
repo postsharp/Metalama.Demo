@@ -11,6 +11,6 @@ namespace ObservableDemo.Model
             string.Format( "{0} {1} from {2}",
                 this.Customer.FirstName,
                 this.Customer.LastName,
-                this.Customer.Address?.Observable ?? "unknown address" );
+                this.Customer.Address?.FullText ?? "unknown address" );
     }
 }

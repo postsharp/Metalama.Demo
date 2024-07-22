@@ -15,11 +15,9 @@ namespace ObservableDemo.Model
 
         public DateTime Expiration { get; set; }
 
-        [NotObservable]
-        public TimeSpan Lifetime => DateTime.Now - this.Expiration;
 
         [SuppressObservabilityWarnings]
-        public string Observable
+        public string FullText
         {
             get
             {
