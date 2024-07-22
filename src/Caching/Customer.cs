@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PostSharp.Samples.Caching
+﻿namespace CachingDemo
 {
   [Serializable]
   internal class Customer

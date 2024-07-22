@@ -1,4 +1,6 @@
-﻿public class Entity : ISwitchableChangeTracking
+﻿namespace ChangeTrackingWithErrorsDemo;
+
+public class Entity : ISwitchableChangeTracking
 {
     public void AcceptChanges() => this.IsChanged = false;
 

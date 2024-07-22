@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
 
+namespace ChangeTrackingWithErrorsDemo;
+
 public interface ISwitchableChangeTracking : IChangeTracking
 {
     /// <summary>
@@ -8,4 +10,3 @@ public interface ISwitchableChangeTracking : IChangeTracking
     /// </summary>
     bool IsTrackingChanges { get; set; }
 }
-

@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System.ComponentModel;
+
+namespace Demo1;
 
 public static class Program
 {
@@ -9,15 +10,13 @@ public static class Program
         CreateHostBuilder( Array.Empty<string>() ).Build().RunAsync();
 
     private static IHostBuilder CreateHostBuilder( string[] args ) =>
-       Host.CreateDefaultBuilder( args )
-           .ConfigureServices( ( _, services ) =>
-           {
-               services.AddHostedService<Worker>();
-           } )
-           .ConfigureLogging( loggingBuilder =>
-           {
-               loggingBuilder.SetMinimumLevel( LogLevel.Debug );
-           } );
+        Host.CreateDefaultBuilder( args )
+            .ConfigureServices( ( _, services ) =>
+            {
+                services.AddHostedService<Worker>();
+            } )
+            .ConfigureLogging( loggingBuilder =>
+            {
+                loggingBuilder.SetMinimumLevel( LogLevel.Debug );
+            } );
 }
-
-

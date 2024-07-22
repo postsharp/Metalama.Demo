@@ -1,12 +1,12 @@
 ﻿using Metalama.Framework.Fabrics;
 using Metalama.Patterns.Contracts;
 
-namespace Contracts;
+namespace ContractsDemo;
 
 public class Fabric : ProjectFabric
 {
     public override void AmendProject( IProjectAmender amender )
     {
-        amender.Outbound.VerifyNotNullableDeclarations();
+        amender.VerifyNotNullableDeclarations();
     }
 }

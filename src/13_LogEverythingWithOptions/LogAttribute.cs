@@ -1,6 +1,8 @@
 ﻿using Metalama.Framework.Aspects;
 using Metalama.Framework.Code;
 
+namespace LogFabricWithOptionsDemo;
+
 class LogAttribute : OverrideMethodAspect
 {
     // Template that overrides the methods to which the aspect is applied.

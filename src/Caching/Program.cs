@@ -3,6 +3,8 @@ using Metalama.Patterns.Caching.Aspects;
 
 [assembly: CachingConfiguration( UseDependencyInjection = false )]
 
+namespace CachingDemo;
+
 [CachingConfiguration( AbsoluteExpiration = 5 )]
 internal class Program
 {

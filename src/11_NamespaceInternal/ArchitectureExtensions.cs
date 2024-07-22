@@ -3,7 +3,7 @@ using Metalama.Framework.Aspects;
 using Metalama.Framework.Code;
 using Metalama.Framework.Validation;
 
-namespace Foo;
+namespace NamespaceInternalDemo;
 
 [CompileTime]
 public static class ArchitectureExtensions
@@ -12,20 +12,23 @@ public static class ArchitectureExtensions
         => builder.Type( "**.Tests.**" );
 
     public static ReferencePredicate TypeKind( this ReferencePredicateBuilder builder, params TypeKind[] typeKinds )
-        => new TypeKindPredicate( typeKinds );
+        => new TypeKindPredicate( builder, typeKinds );
 
 
     class TypeKindPredicate : ReferencePredicate
     {
         private readonly TypeKind[] _typeKinds;
 
-        public TypeKindPredicate( TypeKind[] typeKinds )
+        public TypeKindPredicate( ReferencePredicateBuilder builder, TypeKind[] typeKinds ) : base( builder )
         {
             this._typeKinds = typeKinds;
         }
 
+        public override ReferenceGranularity Granularity => ReferenceGranularity.Type;
 
-        public override bool IsMatch( in ReferenceValidationContext context ) =>
-            Array.IndexOf( this._typeKinds, context.ReferencingType.TypeKind ) >= 0;
+         
+
+        protected override bool IsMatchCore( ReferenceValidationContext context )
+         => Array.IndexOf( this._typeKinds, context.Origin.Type.TypeKind ) >= 0;
     }
 }

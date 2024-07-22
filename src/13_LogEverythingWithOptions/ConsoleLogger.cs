@@ -1,5 +1,7 @@
 ﻿using Metalama.Framework.Aspects;
 
+namespace LogFabricWithOptionsDemo;
+
 static class ConsoleLogger
 {
     [ExcludeAspect(typeof(LogAttribute), Justification = "Avoid infinite recursion.") ]

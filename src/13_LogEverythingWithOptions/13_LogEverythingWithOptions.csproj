@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <DisableCodeQuality>true</DisableCodeQuality>
-    <RootNamespace>Demo1</RootNamespace>
+    <RootNamespace>LogFabricWithOptionsDemo</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Metalama.Framework" Version="$(MetalamaVersion)" />

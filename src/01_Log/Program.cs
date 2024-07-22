@@ -1,4 +1,6 @@
-﻿class Program
+﻿namespace LogDemo;
+
+class Program
 {
     [Log]
     static void MyMethod()
@@ -12,5 +14,3 @@
         MyMethod();
     }
 }
-
-

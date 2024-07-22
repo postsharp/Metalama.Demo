@@ -11,9 +11,9 @@ using PostSharp.Engineering.BuildTools.ContinuousIntegration;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
 using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using Spectre.Console.Cli;
-using MetalamaDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.MetalamaDependencies.V2024_1;
+using MetalamaDependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.MetalamaDependencies.V2024_2;
 
-var teamCityConfiguration = TeamCityHelper.CreateConfiguration( TeamCityHelper.GetProjectId( "Metalama.Demo" ), "caravela04cloud" );
+var teamCityConfiguration = TeamCityHelper.CreateConfiguration( TeamCityHelper.GetProjectId( "Metalama.Demo" ) );
 
 var product = new Product(new DependencyDefinition( MetalamaDependencies.Family, "Metalama.Demo", "dev", "master", new GitHubRepository("Metalama.Demo" ), teamCityConfiguration, false))
 {

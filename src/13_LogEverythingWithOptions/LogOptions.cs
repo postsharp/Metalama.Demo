@@ -1,6 +1,8 @@
 ﻿using Metalama.Framework.Code;
 using Metalama.Framework.Options;
 
+namespace LogFabricWithOptionsDemo;
+
 /// <summary>
 /// Options of the <see cref="LogAttribute"/> aspect.
 /// </summary>

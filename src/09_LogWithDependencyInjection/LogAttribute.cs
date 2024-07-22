@@ -2,6 +2,8 @@
 using Metalama.Framework.Aspects;
 using Microsoft.Extensions.Logging;
 
+namespace Demo1;
+
 class LogAttribute : OverrideMethodAspect
 {
     [IntroduceDependency]

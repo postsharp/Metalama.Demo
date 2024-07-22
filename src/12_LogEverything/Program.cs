@@ -1,4 +1,6 @@
-﻿static class Program
+﻿namespace LogFabricDemo;
+
+static class Program
 {
     static void Main()
     {

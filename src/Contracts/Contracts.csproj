@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DisableCodeQuality>true</DisableCodeQuality>
+        <RootNamespace>ContractsDemo</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Metalama.Patterns.Contracts" Version="$(MetalamaPatternsVersion)" />

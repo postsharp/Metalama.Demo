@@ -1,6 +1,6 @@
 ﻿using Metalama.Patterns.Contracts;
 
-namespace Contracts;
+namespace ContractsDemo;
 
 public class Customer
 {

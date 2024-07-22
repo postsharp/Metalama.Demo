@@ -1,9 +1,11 @@
-﻿class Program
+﻿namespace IntroductionDemo;
+
+class Program
 {
     static void Main()
     {
         var foo = new Foo();
-        Console.WriteLine(foo.Id);
+        Console.WriteLine((int)foo.Id);
     }
     
 }
@@ -14,5 +16,3 @@ partial class Foo
     int _foo;
 
 }
-
-

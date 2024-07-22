@@ -1,5 +1,7 @@
 ﻿using Metalama.Framework.Aspects;
 
+namespace IntroductionDemo;
+
 class IdAttribute : TypeAspect
 {
     [Introduce]

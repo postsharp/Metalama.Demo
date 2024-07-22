@@ -1,4 +1,6 @@
-﻿public class ModeratedComment : Comment
+﻿namespace ChangeTrackingDemo;
+
+public class ModeratedComment : Comment
 {
     public ModeratedComment( Guid id, string author, string content ) : base( id, author, content )
     {

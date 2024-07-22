@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 		<DisableCodeQuality>true</DisableCodeQuality>
+        <RootNamespace>LogDemo2</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

@@ -1,10 +1,10 @@
-﻿using Foo.InternalNamespace;
-using Metalama.Framework.Fabrics;
-using Metalama.Extensions.Architecture.Fabrics;
+﻿using Metalama.Extensions.Architecture;
 using Metalama.Extensions.Architecture.Predicates;
 using Metalama.Framework.Code;
+using Metalama.Framework.Fabrics;
+using NamespaceInternalDemo.InternalNamespace;
 
-namespace Foo
+namespace NamespaceInternalDemo
 {
     namespace InternalNamespace
     {
@@ -12,11 +12,11 @@ namespace Foo
         {
             public override void AmendNamespace( INamespaceAmender amender )
             {
-                amender.Verify()
+                amender
                     .InternalsCanOnlyBeUsedFrom( from => from
                         .CurrentNamespace()
-                        .Or( or => or.AnyTest() ) 
-                        .Or( or => or.TypeKind( TypeKind.Struct, TypeKind.RecordStruct ) ));
+                        .Or().AnyTest()
+                        .Or().TypeKind( TypeKind.Struct, TypeKind.RecordStruct ) );
             }
 
         }

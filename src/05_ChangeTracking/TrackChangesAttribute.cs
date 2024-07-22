@@ -1,6 +1,8 @@
 ﻿using Metalama.Framework.Aspects;
 using Metalama.Framework.Code;
 
+namespace ChangeTrackingDemo;
+
 [Inheritable]
 public class TrackChangesAttribute : TypeAspect
 {

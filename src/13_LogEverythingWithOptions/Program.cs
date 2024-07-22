@@ -1,4 +1,6 @@
-﻿class Program
+﻿namespace LogFabricWithOptionsDemo;
+
+class Program
 {
     static void Main()
     {

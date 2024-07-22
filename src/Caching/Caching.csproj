@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DisableCodeQuality>true</DisableCodeQuality>
+        <RootNamespace>CachingDemo</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Metalama.Patterns.Caching.Aspects" Version="$(MetalamaPatternsVersion)" />

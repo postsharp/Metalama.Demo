@@ -1,5 +1,7 @@
 ﻿using Metalama.Framework.Aspects;
 
+namespace RetryDemo;
+
 internal class RetryAttribute : OverrideMethodAspect
 {
     /// <summary>
@@ -24,4 +26,3 @@ internal class RetryAttribute : OverrideMethodAspect
         }
     }
 }
-

@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
 
+namespace Demo1;
+
 partial class Worker : BackgroundService
 {
     [Log]
@@ -10,5 +12,3 @@ partial class Worker : BackgroundService
         return Task.CompletedTask;
     }
 }
-
-

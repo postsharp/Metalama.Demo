@@ -3,6 +3,7 @@ using Metalama.Framework.Aspects;
 using Metalama.Framework.Code;
 using Metalama.Framework.Diagnostics;
 
+namespace ChangeTrackingWithErrorsDemo;
 
 public class TrackChangesAttribute : TypeAspect
 {

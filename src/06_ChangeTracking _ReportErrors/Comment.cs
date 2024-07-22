@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+﻿namespace ChangeTrackingWithErrorsDemo;
 
 [TrackChanges]
 public partial class Comment // : Entity

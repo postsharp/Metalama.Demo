@@ -1,6 +1,4 @@
-﻿using Demo1;
-
-namespace Foo
+﻿namespace ForTestOnlyDemo
 {
     class Program
     {

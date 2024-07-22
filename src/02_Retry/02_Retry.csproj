@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 		<DisableCodeQuality>true</DisableCodeQuality>
-		<RootNamespace>Demo2</RootNamespace>
+		<RootNamespace>RetryDemo</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

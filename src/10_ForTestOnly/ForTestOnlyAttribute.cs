@@ -1,7 +1,7 @@
 ﻿using Metalama.Extensions.Architecture.Aspects;
 using Metalama.Framework.Aspects;
 
-namespace Demo1
+namespace ForTestOnlyDemo
 {
     [CompileTime]
     internal class ForTestOnlyAttribute : CanOnlyBeUsedFromAttribute

@@ -1,6 +1,6 @@
 ﻿using Metalama.Patterns.Contracts;
 
-namespace Contracts;
+namespace ContractsDemo;
 
 public class Invoice
 {
@@ -9,7 +9,7 @@ public class Invoice
     [StrictlyPositive]
     public decimal Amount { get; set; }
     
-    [Positive]
+    [NonNegative]
     public decimal Tax { get; set; }
 
     [Invariant]

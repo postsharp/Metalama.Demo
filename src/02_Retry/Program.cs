@@ -1,4 +1,6 @@
-﻿class Program
+﻿namespace RetryDemo;
+
+class Program
 {
  
     [Retry( Attempts = 5 )]
@@ -22,5 +24,3 @@
         MyMethod();
     }
 }
-
-

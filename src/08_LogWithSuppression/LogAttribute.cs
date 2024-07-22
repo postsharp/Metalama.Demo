@@ -3,6 +3,8 @@ using Metalama.Framework.Code;
 using Metalama.Framework.Diagnostics;
 using Metalama.Framework.Eligibility;
 
+namespace Demo1;
+
 class LogAttribute : OverrideMethodAspect
 {
     // Definition of the warning. It must be a static field in the aspect class.

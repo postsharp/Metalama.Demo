@@ -1,21 +1,21 @@
 ﻿using Metalama.Framework.Fabrics;
 
-namespace Demo1
+namespace LogFabricWithOptionsDemo
 {
     internal class Fabric : ProjectFabric
     {
         public override void AmendProject( IProjectAmender amender )
         {
             // Configure logging.
-            amender.Outbound
+            amender
                 .SetOptions( new LogOptions { Color = ConsoleColor.Green } );
-            amender.Outbound
+            amender
                 .SelectMany( c=>c.Types.OfName( nameof(Greeter) ) )
                 .SetOptions( new LogOptions { Color = ConsoleColor.Red } );
             
 
             // Add logging to all types and all methods.
-            amender.Outbound
+            amender
                 .SelectMany( c => c.Types )
                 .SelectMany( t => t.Methods )
                 .AddAspectIfEligible<LogAttribute>();

@@ -1,4 +1,6 @@
-﻿[TrackChanges]
+﻿namespace ChangeTrackingDemo;
+
+[TrackChanges]
 public partial class Comment
 {
     public Guid Id { get; }

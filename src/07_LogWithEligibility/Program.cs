@@ -1,4 +1,6 @@
-﻿class Program
+﻿namespace Demo1;
+
+class Program
 {
     TextWriter _logger = Console.Out;
 
@@ -14,5 +16,3 @@
     
     }
 }
-
-

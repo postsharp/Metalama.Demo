@@ -2,6 +2,8 @@
 using Metalama.Framework.Code;
 using Metalama.Framework.Code.SyntaxBuilders;
 
+namespace LogDemo2;
+
 class LogAttribute : OverrideMethodAspect
 {
     public override dynamic? OverrideMethod()
