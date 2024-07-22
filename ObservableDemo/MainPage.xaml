@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:ObservableDemo.Model"
+             x:Class="ObservableDemo.MainPage"
+             x:DataType="model:CustomerViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label Text="First Name"/>
+
+            <Entry Text="{Binding Customer.FirstName}" />
+            
+            <Label Text="Last Name"/>
+
+            <Entry Text="{Binding Customer.LastName}" />
+            
+            <Label Text="Address"/>
+            
+            <Entry Text="{Binding Customer.Address.Line1}" />
+            <Entry Text="{Binding Customer.Address.Line2}" />
+            
+            <Label Text="City"/>
+            
+            <Entry Text="{Binding Customer.Address.City}" />
+
+            <Label
+                Text="Summary"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level2" />
+            
+            <Label Text="{Binding FullName}"/>
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
