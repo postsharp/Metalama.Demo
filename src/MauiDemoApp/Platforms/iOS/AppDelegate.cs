@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace ObservableDemo;
+namespace MauiDemoApp;
 
 [Register( "AppDelegate" )]
 public class AppDelegate : MauiUIApplicationDelegate

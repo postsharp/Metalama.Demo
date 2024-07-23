@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace ObservableDemo;
+namespace MauiDemoApp;
 
 public static class MauiProgram
 {

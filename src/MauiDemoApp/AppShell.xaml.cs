@@ -1,4 +1,4 @@
-﻿namespace ObservableDemo;
+﻿namespace MauiDemoApp;
 
 public partial class AppShell : Shell
 {

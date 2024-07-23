@@ -1,7 +1,7 @@
 ﻿using Metalama.Patterns.Observability;
 using System.Text;
 
-namespace ObservableDemo.Model;
+namespace MauiDemoApp.Model;
 
 public class AddressModel : ModelBase
 {

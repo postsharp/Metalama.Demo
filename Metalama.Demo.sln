@@ -49,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caching", "src\Caching\Cach
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "src\Contracts\Contracts.csproj", "{E8A90363-D95C-4175-AD42-0A8A73BADD54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObservableDemo", "src\Observable\Observable.csproj", "{CE42B914-E731-436B-AD27-B70B73C7D74E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppDemo", "src\MauiDemoApp\MauiDemoApp.csproj", "{CE42B914-E731-436B-AD27-B70B73C7D74E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

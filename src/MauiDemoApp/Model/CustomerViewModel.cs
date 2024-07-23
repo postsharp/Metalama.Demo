@@ -1,6 +1,6 @@
 ﻿using Metalama.Patterns.Observability;
 
-namespace ObservableDemo.Model;
+namespace MauiDemoApp.Model;
 
 [Observable]
 public class CustomerViewModel

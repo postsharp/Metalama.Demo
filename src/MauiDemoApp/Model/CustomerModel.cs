@@ -1,4 +1,4 @@
-﻿namespace ObservableDemo.Model;
+﻿namespace MauiDemoApp.Model;
 
 public class CustomerModel : ModelBase
 {

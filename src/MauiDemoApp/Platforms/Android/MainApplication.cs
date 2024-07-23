@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace ObservableDemo;
+namespace MauiDemoApp;
 
 [Application]
 public class MainApplication : MauiApplication

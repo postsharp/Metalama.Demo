@@ -1,6 +1,6 @@
-﻿using ObservableDemo.Model;
+﻿using MauiDemoApp.Model;
 
-namespace ObservableDemo;
+namespace MauiDemoApp;
 
 public partial class MainPage : ContentPage
 {
