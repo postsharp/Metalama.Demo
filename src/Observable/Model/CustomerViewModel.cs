@@ -1,16 +1,17 @@
 ﻿using Metalama.Patterns.Observability;
 
-namespace ObservableDemo.Model
-{
-    [Observable]
-    public class CustomerViewModel
-    {
-        public CustomerModel Customer { get; set; }
+namespace ObservableDemo.Model;
 
-        public string FullName =>
-            string.Format( "{0} {1} from {2}",
+[Observable]
+public class CustomerViewModel
+{
+    public CustomerModel? Customer { get; set; }
+
+    public string FullName =>
+        this.Customer == null
+            ? "nobody"
+            : string.Format( "{0} {1} from {2}",
                 this.Customer.FirstName,
                 this.Customer.LastName,
                 this.Customer.Address?.FullText ?? "unknown address" );
-    }
 }
