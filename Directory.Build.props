@@ -5,13 +5,13 @@
         <RepoKind>GitHub</RepoKind> <!-- Valid values: AzureRepos | GitHub -->
     </PropertyGroup>
 
-     <PropertyGroup>
+    <PropertyGroup>
         <IsPackable>False</IsPackable>
-        
+
         <EnableNETAnalyzers>False</EnableNETAnalyzers>
 
         <LangVersion>10.0</LangVersion>
-     
+
     </PropertyGroup>
 
 
