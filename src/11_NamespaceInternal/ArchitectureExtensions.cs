@@ -24,9 +24,7 @@ public static class ArchitectureExtensions
             this._typeKinds = typeKinds;
         }
 
-        public override ReferenceGranularity Granularity => ReferenceGranularity.Type;
-
-         
+        protected override ReferenceGranularity GetGranularity() => ReferenceGranularity.Type;
 
         protected override bool IsMatchCore( ReferenceValidationContext context )
          => Array.IndexOf( this._typeKinds, context.Origin.Type.TypeKind ) >= 0;
