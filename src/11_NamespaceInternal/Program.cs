@@ -13,10 +13,8 @@ namespace NamespaceInternalDemo
             public override void AmendNamespace( INamespaceAmender amender )
             {
                 amender
-                    .InternalsCanOnlyBeUsedFrom( from => from
-                        .CurrentNamespace()
-                        .Or().AnyTest()
-                        .Or().TypeKind( TypeKind.Struct, TypeKind.RecordStruct ) );
+                    .InternalsCanOnlyBeUsedFrom( 
+                        from => from.CurrentNamespace().Or().AnyTest() );
             }
 
         }

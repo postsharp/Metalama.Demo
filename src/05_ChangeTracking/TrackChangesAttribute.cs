@@ -1,4 +1,5 @@
-﻿using Metalama.Framework.Aspects;
+﻿using Metalama.Framework.Advising;
+using Metalama.Framework.Aspects;
 using Metalama.Framework.Code;
 
 namespace ChangeTrackingDemo;
@@ -9,13 +10,11 @@ public class TrackChangesAttribute : TypeAspect
     public override void BuildAspect( IAspectBuilder<INamedType> builder )
     {
         // Implement the ISwitchableChangeTracking interface.
-        builder.Advice.ImplementInterface( builder.Target, typeof(ISwitchableChangeTracking), OverrideStrategy.Ignore );
+        builder.ImplementInterface( typeof(ISwitchableChangeTracking), OverrideStrategy.Ignore );
 
         // Override all writable fields and automatic properties.
         var fieldsOrProperties = builder.Target.FieldsAndProperties
-            .Where( f => !f.IsImplicitlyDeclared &&
-                         f.IsAutoPropertyOrField == true &&
-                         f.Writeability == Writeability.All );
+            .Where( f => f is { IsImplicitlyDeclared: false, IsAutoPropertyOrField: true, Writeability: Writeability.All } );
 
         foreach ( var fieldOrProperty in fieldsOrProperties )
         {

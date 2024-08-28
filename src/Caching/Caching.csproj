@@ -10,5 +10,6 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Metalama.Patterns.Caching.Aspects" Version="$(MetalamaPatternsVersion)" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0"/>
     </ItemGroup>
 </Project>
