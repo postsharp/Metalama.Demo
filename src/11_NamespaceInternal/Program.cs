@@ -1,6 +1,5 @@
 ﻿using Metalama.Extensions.Architecture;
 using Metalama.Extensions.Architecture.Predicates;
-using Metalama.Framework.Code;
 using Metalama.Framework.Fabrics;
 using NamespaceInternalDemo.InternalNamespace;
 
@@ -14,7 +13,8 @@ namespace NamespaceInternalDemo
             {
                 amender
                     .InternalsCanOnlyBeUsedFrom( 
-                        from => from.CurrentNamespace().Or().AnyTest() );
+                        from => from.CurrentNamespace().Or().AnyTest(),
+                        description: "The boss said no.");
             }
 
         }

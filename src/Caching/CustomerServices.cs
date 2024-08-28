@@ -3,7 +3,7 @@ using Metalama.Patterns.Caching.Aspects;
 
 namespace CachingDemo;
 
-internal class CustomerServices
+internal partial class CustomerServices
 {
     [Cache]
     public Customer GetCustomer(int id)
@@ -25,6 +25,6 @@ internal class CustomerServices
         Console.WriteLine($">> Deleting the customer {id} from database...");
         Thread.Sleep(1000);
 
-        CachingService.Default.Invalidate(GetCustomer, id);
+        this._cachingService.Invalidate(GetCustomer, id);
     }
 }

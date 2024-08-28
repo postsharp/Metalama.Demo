@@ -1,11 +1,9 @@
-﻿using Metalama.Patterns.Caching.Aspects;
-using Metalama.Patterns.Caching.Building;
+﻿using Metalama.Patterns.Caching.Building;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CachingDemo;
 
-[CachingConfiguration( AbsoluteExpiration = 5 )]
-internal class Program
+internal static class Program
 {
     private static void Main( string[] args )
     {

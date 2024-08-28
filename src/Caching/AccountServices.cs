@@ -3,7 +3,7 @@ using Metalama.Patterns.Caching.Aspects;
 
 namespace CachingDemo;
 
-internal class AccountServices
+internal partial class AccountServices
 {
     [Cache]
     public Account GetAccount(int id)
@@ -13,7 +13,7 @@ internal class AccountServices
 
         var account = new Account { AccountId = id };
 
-        CachingService.Default.AddDependency(account);
+        this._cachingService.AddDependency(account);
 
         return account;
     }
@@ -32,6 +32,6 @@ internal class AccountServices
         Thread.Sleep(1000);
 
         // This will invalidate both GetAccount and GetAccountsOfCustomer.
-        CachingService.Default.Invalidate(account);
+        this._cachingService.Invalidate(account);
     }
 }
